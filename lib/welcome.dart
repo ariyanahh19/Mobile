@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/registrasi.dart';
 
 import 'login.dart';
 
@@ -59,19 +60,26 @@ class welcome extends StatelessWidget {
                    ),),),
                    ),
                  ),
-                  const SizedBox(height: 25,),
-                  Container(
-                  height: 53,
-                  width: 320,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                    color: Colors.grey,
-                  ),
-                  child: const Center(child: Text('Register',style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black
-                 ),),),
+                 SizedBox(height: 17),
+                  GestureDetector(
+                  onTap: (){
+                    Navigator.push(context,
+                        MaterialPageRoute(builder:(context) => RegistrasiScreen()));
+                  },
+                  child: Container(
+                    height: 53,
+                    width: 320,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      color: Color.fromARGB(255, 94, 94, 94), 
+                    ),
+                      
+                    child: const Center(child: Text('Register',style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 0, 0, 0)
+                   ),),),
+                   ),
                  ),
                   const Spacer(),
           
